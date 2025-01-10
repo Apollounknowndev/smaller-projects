@@ -1,0 +1,11 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "MIT"
+
+[[mods]]
+modId = "smaller_project_testing"
+version = "1"
+displayName = "Smaller Project Testing"
+logoFile = "pack.png"
+authors = "Apollo"
+description = '''1.20 testing mod for smaller projects.'''

@@ -1,0 +1,11 @@
+modLoader = "lowcodefml"
+loaderVersion = "[1,)"
+license = "MIT"
+
+[[mods]]
+modId = "underground_rivers"
+version = "1.0.0"
+displayName = "Underground Rivers"
+logoFile="pack.png"
+authors = "Apollo"
+description = '''Rivers, but underground! Wild, isn't it?'''

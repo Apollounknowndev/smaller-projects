@@ -1,0 +1,33 @@
+modLoader = "lowcodefml"
+loaderVersion = "[1,)"
+license = "MIT"
+
+[[mods]]
+modId = "improved_village_placement"
+version = "1.0.0"
+displayName = "Improved Village Placement"
+logoFile="pack.png"
+authors = "Apollo"
+description = '''Forces villages to spawn on flat terrain.'''
+
+
+[[dependencies.improved_village_placement]]
+modId = "neoforge"
+type="required"
+versionRange = "[21.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.improved_village_placement]]
+modId = "minecraft"
+type="required"
+versionRange = "[1.21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.improved_village_placement]]
+modId = "lithostitched"
+type="required"
+versionRange = "[1.4,)"
+ordering = "NONE"
+side = "BOTH"

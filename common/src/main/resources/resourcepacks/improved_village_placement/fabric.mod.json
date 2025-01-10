@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "improved_village_placement",
+  "version": "1.0.0",
+  "name": "Improved Village Placement",
+  "description": "Forces villages to spawn on flat terrain.",
+  "authors": [
+      "Apollo"
+  ],
+  "contact": {
+      "homepage": "https://modrinth.com/project/smaller-projects",
+      "sources": "https://github.com/Apollounknowndev/smaller-projects/",
+      "issues": "https://github.com/Apollounknowndev/smaller-projects/issues"
+  },
+  "license": "MIT",
+  "icon": "pack.png",
+  "environment": "*",
+  "depends": {
+      "minecraft": ">=1.20",
+      "lithostitched": ">=1.4"
+  }
+}

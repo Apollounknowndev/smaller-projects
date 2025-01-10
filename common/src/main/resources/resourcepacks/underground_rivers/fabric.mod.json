@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "underground_rivers",
+  "version": "1.0.0",
+  "name": "Underground Rivers",
+  "description": "Rivers, but underground! Wild, isn't it?",
+  "authors": [
+      "Apollo"
+  ],
+  "contact": {
+      "homepage": "https://modrinth.com/project/underground-rivers",
+      "sources": "https://github.com/Apollounknowndev/underground-rivers/",
+      "issues": "https://github.com/Apollounknowndev/underground-rivers/issues"
+  },
+  "license": "MIT",
+  "icon": "pack.png",
+  "environment": "*",
+  "depends": {
+      "minecraft": ">=1.20",
+      "lithostitched": ">=1.3.1"
+  }
+}

@@ -1,0 +1,11 @@
+modLoader = "lowcodefml"
+loaderVersion = "[1,)"
+license = "MIT"
+
+[[mods]]
+modId = "improved_village_placement"
+version = "1.0.0"
+displayName = "Improved Village Placement"
+logoFile="pack.png"
+authors = "Apollo"
+description = '''Forces villages to spawn on flat terrain.'''

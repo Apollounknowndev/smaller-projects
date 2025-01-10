@@ -1,0 +1,18 @@
+{
+    "overlays": {
+        "entries": [
+            {
+                "directory": "overlay",
+                "formats": 48
+            }
+        ]
+    },
+    "pack": {
+        "description": "",
+        "pack_format": 15,
+        "supported_formats": [
+            15,
+            48
+        ]
+    }
+}

@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'maven-publish'
+    id 'fabric-loom'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+base {
+    archivesName = "reintegrated-all-1.21.1"
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.1"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:0.16.9"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.110.0+1.21.1"
+    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+    implementation project(":common")
+
+    modImplementation("maven.modrinth:lithostitched:ZTVGFIfa")
+}
+
+loom {
+    runs {
+        client {
+            client()
+            setConfigName("Fabric Client")
+            ideConfigGenerated(true)
+            runDir("run")
+        }
+        server {
+            server()
+            setConfigName("Fabric Server")
+            ideConfigGenerated(true)
+            runDir("run")
+        }
+    }
+}
+
+processResources {
+    from project(":common").sourceSets.main.resources
+}

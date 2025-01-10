@@ -1,0 +1,65 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'maven-publish'
+    id "me.modmuss50.mod-publish-plugin" version "0.5.1"
+}
+
+base {
+    archivesName = "underground_rivers"
+}
+
+processResources {
+    from project(":common").sourceSets.main.resources
+}
+
+tasks.register('compileDatapack', Zip) {
+    archiveFileName = "underground_rivers_%s.jar".formatted(project.version)
+    destinationDirectory = file("$buildDir/distributions")
+
+    from(project(':common').file("src/main/resources/resourcepacks/underground_rivers")) {
+        include "**/*"
+    }
+}
+
+publishMods {
+    file = compileDatapack.archiveFile
+    changelog = "Backport to 1.20."
+    type = STABLE
+    modLoaders.add("fabric")
+    modLoaders.add("forge")
+    modLoaders.add("neoforge")
+    displayName = "v%s".formatted(project.version)
+
+    dryRun = true
+
+    modrinth {
+        accessToken = providers.environmentVariable("TOKEN_MR")
+        projectId = "Y7J94SaP"
+
+        minecraftVersions.add("1.20.1")
+        minecraftVersions.add("1.21")
+        minecraftVersions.add("1.21.1")
+        minecraftVersions.add("1.21.2")
+        minecraftVersions.add("1.21.3")
+        minecraftVersions.add("1.21.4")
+
+        requires {
+            slug = "lithostitched"
+        }
+    }
+
+    curseforge {
+        accessToken = providers.environmentVariable("TOKEN_CF")
+        projectId = "1108285"
+
+        minecraftVersions.add("1.20.1")
+        minecraftVersions.add("1.21")
+        minecraftVersions.add("1.21.1")
+        minecraftVersions.add("1.21.2")
+        minecraftVersions.add("1.21.3")
+        minecraftVersions.add("1.21.4")
+
+        requires("lithostitched")
+    }
+}

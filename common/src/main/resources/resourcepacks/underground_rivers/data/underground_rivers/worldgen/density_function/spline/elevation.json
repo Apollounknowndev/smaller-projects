@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:clamp",
+  "input": {
+    "type": "minecraft:add",
+    "argument1": 1,
+    "argument2": {
+      "type": "minecraft:mul",
+      "argument1": "underground_rivers:noise/height",
+      "argument2": {
+        "type": "minecraft:abs",
+        "argument": {
+          "type": "minecraft:add",
+          "argument1": "underground_rivers:noise/y_offset",
+          "argument2": {
+            "type": "minecraft:add",
+            "argument1": "minecraft:y",
+            "argument2": {
+              "type": "minecraft:mul",
+              "argument1": {
+                "type": "minecraft:add",
+                "argument1": 1,
+                "argument2": {
+                  "type": "minecraft:mul",
+                  "argument1": -1,
+                  "argument2": "underground_rivers:spline/erosion"
+                }
+              },
+              "argument2": {
+                "type": "minecraft:y_clamped_gradient",
+                "from_y": 64,
+                "to_y": 80,
+                "from_value": 0,
+                "to_value": -16
+              }
+            }
+            
+          }
+        }
+      }
+    }
+  },
+  "min": 0,
+  "max": 1
+}

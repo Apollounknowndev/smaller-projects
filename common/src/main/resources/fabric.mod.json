@@ -1,0 +1,14 @@
+{
+    "schemaVersion": 1,
+    "id": "smaller_project_testing",
+    "version": "1",
+    "authors": [
+        "Apollo"
+    ],
+    "entrypoints": {
+        "main": [
+            "dev.worldgen.SmallerProjectTesting"
+        ]
+    }
+}
+  
